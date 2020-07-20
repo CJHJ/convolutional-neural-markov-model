@@ -20,7 +20,12 @@ Every training scripts start with ```train_```, followed by the name of the mode
 ```
 python train_cnmm_heatmap.py -tn 0 -ee 150
 ``` 
-will start CNMM training with specified hard-coded configurations and data location inside the script, with heat diffusion data as target. We will upload the script and the guidelines to test with other custom data in near future.
+will start CNMM training with specified hard-coded configurations and data location inside the script, with heat diffusion data as target. The ```-tn``` and ```-ee``` means trial number and last training epoch number, respectively. The detailed arguments for each scripts can be displayed by running:
+```
+python train_cnmm_heatmap.py --help
+```
+
+In the near future, we will upload the codes and guidelines for testing with custom data.
 
 # TODOs
 As can be seen, the training scripts are divided into several different scripts for each settings. This is very ineffective, as a change to the flow of the script will require us modifying other affected scripts. We plan to rewrite the training scripts to increase efficiency and effectiveness. We also plan to refactor/reorganize the whole project into a much more manageable structure.
