@@ -2,12 +2,12 @@
 Experiment codes for the paper '2D Convolutional Neural Markov Models for Spatiotemporal Sequence Forecasting'
 
 # Project structure
-|-- data_generation         : Data generation script
-|-- models                  : Training model codes - ConvLSTM, ConvDMM, Vanilla DMM
-|-- utils                   : Utils codes
-scripts                     : Training scripts
-generate_data.py            : Data generation
-visualize                   : 2D and 3D visualization script
+|-- data_generation         : Data generation script  
+|-- models                  : Training model codes - ConvLSTM, ConvDMM, Vanilla DMM  
+|-- utils                   : Utils codes  
+scripts                     : Training scripts  
+generate_data.py            : Data generation  
+visualize                   : 2D and 3D visualization script  
 
 # Running
 Use
