@@ -63,6 +63,7 @@ def generate_param(radius_range, cx_range, cy_range, temp_range, generated_param
 def main(args):
     # Generate data
     data_path = Path(args.savepath)
+    data_path.mkdir(parents=True, exist_ok=True)
 
     N = 25
     temp_base = 0

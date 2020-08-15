@@ -153,7 +153,7 @@ def do_timestep(u_prev, dt, squared_dx, squared_dy, thermal_diffusivity):
     return u
 
 
-def generate_noise(params, nx, ny, type=Noise.NORMAL, zero_border=True):
+def generate_noise(params, nx, ny, type=Noise.NORMAL, is_zero_border=True):
     """
     Generate noise according to specified pdf.
 
@@ -175,7 +175,7 @@ def generate_noise(params, nx, ny, type=Noise.NORMAL, zero_border=True):
     elif type == Noise.CAUCHY:
         noise = scistats.cauchy.rvs(params[0], params[1], nvar).reshape(nx, ny)
 
-    if zero_border:
+    if is_zero_border:
         noise = zero_border(noise)
 
     return noise
