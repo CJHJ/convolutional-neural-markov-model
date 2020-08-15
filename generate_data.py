@@ -34,7 +34,7 @@ def exist_param(param, generated_params, tol=1e-4):
 
 def generate_param(radius_range, cx_range, cy_range, temp_range, generated_params):
     """
-    Generate new parameters.
+    Generate new ring heat parameters.
 
     Args:
         generated_params ((float, float, float, float)[]): List of generated params.
