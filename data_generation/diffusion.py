@@ -21,6 +21,7 @@ def generate(
     temperature_hot=700,
     ring_params=(2, 5, 5),
     trans_stoch=None,
+    trans_pdf=Noise.NORMAL,
     emis_stoch=None,
     emis_pdf=Noise.NORMAL
 ):
@@ -42,6 +43,7 @@ def generate(
             cx (float): x position of center of ring.
             cy (float): y position of center of ring.
         trans_stoch (loc (float), scale (float)): Add gaussian noise on ODE transition function.
+        trans_pdf (Noise): Type of transition noise pdf
         emis_stoch (loc (float), scale (float)): Add gaussian noise on emission function.
         emis_pdf (Noise): Type of emission noise pdf
 
@@ -78,7 +80,7 @@ def generate(
                           squared_dy, thermal_diffusivity)
 
         if trans_stoch is not None:
-            u_0 = u_0 + generate_noise(trans_stoch, nx, ny)
+            u_0 = u_0 + generate_noise(trans_stoch, nx, ny, type=trans_pdf)
 
         if emis_stoch is not None:
             x_0 = u_0 + generate_noise(emis_stoch, nx, ny, type=emis_pdf)
