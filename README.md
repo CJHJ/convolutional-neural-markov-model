@@ -3,7 +3,7 @@ Experiment codes for the paper '2D Convolutional Neural Markov Models for Spatio
 
 # Project structure
 ## Main
-|-- configs                  : Configurations for data generation and training model
+|-- configs                  : Configurations for data generation and training model  
 |-- data_generation         : Data generation script  
 |-- models                  : Training model codes - ConvLSTM, ConvDMM, Vanilla DMM  
 |-- utils                   : Utils codes  
