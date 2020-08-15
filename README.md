@@ -19,7 +19,7 @@ Use
 ```
 python generate_data.py
 ```
-to generate heat diffusion data, which parameters are defined by a sample configuration file in ```/configs/data_generation```. Description for each parameters are as follows.
+to generate heat diffusion data, which parameters are defined by a sample configuration file in ```/configs/data_generation```. Description for each parameters are as follows. The types of probability distribution function available are ```normal``` and ```cauchy```.
 
 | Parameter                  | Description                                                                                                                                                                                                           |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
